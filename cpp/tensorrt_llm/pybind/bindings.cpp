@@ -65,7 +65,7 @@ PYBIND11_MODULE(TRTLLM_PYBIND_MODULE, m)
     py::class_<tbk::KvCacheConfig>(m, "KvCacheConfig")
         .def(py::init<std::optional<SizeType>, std::optional<SizeType>, std::optional<float>, bool>(),
             py::arg("max_tokens") = py::none(), py::arg("max_attention_window") = py::none(),
-            py::arg("free_gpu_memory_fraction") = py::none(), py::arg("enable_block_reuse") = false)
+            py::arg("free_gpu_memory_fraction") = py::none(), py::arg("enable_block_reuse") = true)
         .def_readwrite("max_tokens", &tbk::KvCacheConfig::maxTokens)
         .def_readwrite("max_attention_window", &tbk::KvCacheConfig::maxAttentionWindow)
         .def_readwrite("free_gpu_memory_fraction", &tbk::KvCacheConfig::freeGpuMemoryFraction)

@@ -31,7 +31,7 @@ public:
 
     explicit KvCacheConfig(std::optional<SizeType> maxTokens = std::nullopt,
         std::optional<SizeType> maxAttentionWindow = std::nullopt,
-        std::optional<float> freeGpuMemoryFraction = std::nullopt, bool enableBlockReuse = false)
+        std::optional<float> freeGpuMemoryFraction = std::nullopt, bool enableBlockReuse = true)
         : maxTokens{maxTokens}
         , maxAttentionWindow{maxAttentionWindow}
         , freeGpuMemoryFraction{freeGpuMemoryFraction}
